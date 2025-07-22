@@ -1,0 +1,160 @@
+#root > div:nth-of-type(2) {
+  flex-direction: column;
+}
+
+.title-container,
+.bottom-panel {
+  display: flex;
+  width: 100%;
+}
+
+.title-container {
+  height: 70%;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+
+  h4 {
+    font-weight: 300;
+    font-size: clamp(0.4rem, 3vw, 0.7rem);
+    letter-spacing: 1vw;
+  }
+
+  h1 {
+    font-family: var(--title-font);
+    font-size: clamp(3rem, 22vw, 8.5rem);
+    text-align: center;
+    line-height: 1.1;
+
+    span {
+      font-size: inherit;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px white;
+    }
+  }
+}
+
+.bottom-panel {
+  height: 30%;
+  position: relative;
+}
+
+.vignette {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0, black, rgba(0, 0, 0, 0));
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+
+.bottom-panel > img {
+  height: clamp(20rem, 65vw, 25rem);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-60%);
+}
+
+.bottom-panel > div:nth-of-type(2) {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  padding: 0 5%;
+}
+
+.copyright {
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  width: 35%;
+  display: flex;
+  align-items: center;
+}
+
+.copyright > span {
+  height: 1.3px;
+  width: min(5vw, 30px);
+  margin-left: 10px;
+  background: linear-gradient(
+    var(--angle),
+    var(--start-color),
+    var(--end-color)
+  );
+}
+
+.CTA-button > div:first-child {
+  display: none;
+}
+
+.CTA-button {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CTA-button > div:nth-of-type(2) {
+  padding: 0.5em;
+  width: 10em;
+  background: linear-gradient(to right, var(--start-color), var(--end-color));
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: clamp(0.7rem, 2.3vw, 1rem);
+  text-align: center;
+}
+
+.search-bar {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-bar > div {
+  width: 100%;
+  font-size: clamp(0.5rem, 2vw, 1rem);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-bar > div > input {
+  width: 9em;
+  margin-right: 1em;
+  font-size: clamp(0.5rem, 2vw, 1rem);
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid gray;
+}
+
+.search-bar > div > span {
+  font-size: clamp(1rem, 3.5vw, 2rem);
+}
+
+.search-bar > div > input:focus {
+  border-bottom: 1px solid white;
+}
+
+/* Breakpoints */
+@media (max-width: 360px) {
+  .copyright > span {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+}
+
+@media (min-width: 768px) {
+  /* Tablets (iPad Portrait) */
+}
+
+@media (min-width: 1024px) {
+  /* Desktop (iPad Landscape / Laptops) */
+}
+
+@media (min-width: 1280px) {
+  /* Large desktops */
+}
