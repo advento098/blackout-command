@@ -36,15 +36,17 @@ function App() {
         </nav>
         <section>
           <div className="title-container">
-            <h4>NO POWER. NO MERCY. JUST SURVIVAL</h4>
+            <h4>NO POWER. NO MERCY. JUST SURVIVAL.</h4>
             <h1>
               BLACKOUT <br />
               <span>COMMAND</span>
             </h1>
           </div>
           <div className="bottom-panel">
+            <div className="vignette"></div>
+            <img src="./src/assets/character-model.svg" alt="soldier-model" />
             <div>
-              <div className="copyright"></div>
+              <div className="copyright">&copy; Blackout Inc.</div>
               <div className="CTA-button"></div>
               <div className="search-bar"></div>
             </div>
