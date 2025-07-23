@@ -44,14 +44,14 @@ export default function Nav() {
 
         <div className="hexagon-border">
           <div className="hexagon-fill">
-            <img src="./src/assets/controller-logo.svg" />
+            <img src="./blackout-command/src/assets/controller-logo.svg" />
           </div>
         </div>
 
         <div className="right-nav">
           <ul>
             <li>
-              <a href="/">Inventory</a>
+              <a href="#">Inventory</a>
             </li>
             <li>
               <a href="/">Shop</a>
