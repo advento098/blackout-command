@@ -27,9 +27,9 @@ export default function Content() {
                 <p>Download Now</p>
               </a>
             </div>
-            <div>
+            <button>
               <p>Download on PC</p>
-            </div>
+            </button>
           </div>
           <div className="search-bar">
             <div>

@@ -109,11 +109,12 @@
   align-items: center;
 }
 
-.CTA-button > div:nth-of-type(2) {
+.CTA-button > button {
   padding: 0.5em;
   width: 10em;
   background: linear-gradient(to right, var(--start-color), var(--end-color));
   border-radius: 10px;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: clamp(0.7rem, 2.3vw, 1rem);
   text-align: center;
@@ -176,6 +177,10 @@
   .copyright > span {
     display: none;
   }
+
+  .search-bar {
+    display: none;
+  }
 }
 
 @media (min-width: 600px) {
@@ -195,7 +200,7 @@
     width: min(5vw, 3.5em);
   }
 
-  .CTA-button > div:nth-of-type(2) {
+  .CTA-button > button {
     display: none;
   }
 

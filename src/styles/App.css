@@ -179,7 +179,47 @@ a {
   background: linear-gradient(to right, var(--start-color), var(--end-color));
 }
 
+.search-bar2 {
+  display: none;
+}
+
 /* Breakpoints */
+
+@media (max-width: 360px) {
+  .search-bar2 {
+    width: 40%;
+    display: flex;
+    margin-left: auto;
+    margin-right: 2em;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .search-bar2 > div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .search-bar2 > div > input {
+    width: 9em;
+    margin-right: 1em;
+    font-size: clamp(0.5rem, 3vw, 1rem);
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid gray;
+  }
+
+  .search-bar2 > div > span {
+    font-size: clamp(1rem, 3.5vw, 2rem);
+  }
+
+  .search-bar2 > div > input:focus {
+    border-bottom: 1px solid white;
+  }
+}
+
 @media (min-width: 600px) {
   /* Small tablets */
   .burger-container,

@@ -76,6 +76,13 @@ export default function Nav() {
             </li>
           </ul>
         </div>
+
+        <div className="search-bar2">
+          <div>
+            <input type="text" placeholder="Search arsenal" />
+            <span className="material-symbols-outlined">search</span>
+          </div>
+        </div>
       </nav>
 
       <div
