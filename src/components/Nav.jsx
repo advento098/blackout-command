@@ -32,8 +32,13 @@ export default function Nav() {
         <div className="left-nav">
           <ul>
             <li className="brand">BLACKOUT INC.</li>
-            <li>Home</li>
-            <li>About</li>
+            <li>
+              {" "}
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/">About</a>
+            </li>
           </ul>
         </div>
 
@@ -45,8 +50,12 @@ export default function Nav() {
 
         <div className="right-nav">
           <ul>
-            <li>Inventory</li>
-            <li>Shop</li>
+            <li>
+              <a href="/">Inventory</a>
+            </li>
+            <li>
+              <a href="/">Shop</a>
+            </li>
             <li className="game-info">
               Game Info
               <span className="material-symbols-outlined">arrow_drop_down</span>

@@ -13,25 +13,26 @@
   text-align: center;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
 
-  h4 {
-    font-weight: 300;
-    font-size: clamp(0.4rem, 3vw, 0.7rem);
-    letter-spacing: 1vw;
-  }
+.title-container h4 {
+  font-weight: 300;
+  font-size: clamp(0.4rem, 3vw, 0.7rem);
+  letter-spacing: min(1vw, 0.6rem);
+}
 
-  h1 {
-    font-family: var(--title-font);
-    font-size: clamp(3rem, 22vw, 8.5rem);
-    text-align: center;
-    line-height: 1.1;
+.title-container h1 {
+  font-family: var(--title-font);
+  font-size: clamp(3rem, 22vw, 8.5rem);
+  text-align: center;
+  line-height: 1.1;
+}
 
-    span {
-      font-size: inherit;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: 1px white;
-    }
-  }
+.title-container h1 span {
+  font-size: inherit;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px white;
 }
 
 .bottom-panel {
@@ -137,6 +138,8 @@
   border-bottom: 1px solid white;
 }
 
+/* Transitionss */
+
 /* Breakpoints */
 @media (max-width: 360px) {
   .copyright > span {
@@ -145,16 +148,67 @@
 }
 
 @media (min-width: 600px) {
-}
+  .title-container h4 {
+    font-weight: 300;
+    font-size: clamp(0.4rem, 3vw, 0.7rem);
+  }
 
-@media (min-width: 768px) {
-  /* Tablets (iPad Portrait) */
-}
+  .title-container h1 {
+    font-family: var(--title-font);
+    font-size: clamp(8.5rem, 20vw, 9.7rem);
+    text-align: center;
+    line-height: 1.1;
+  }
 
-@media (min-width: 1024px) {
-  /* Desktop (iPad Landscape / Laptops) */
-}
+  .copyright > span {
+    width: min(5vw, 3.5em);
+  }
 
-@media (min-width: 1280px) {
-  /* Large desktops */
+  .CTA-button > div:nth-of-type(2) {
+    display: none;
+  }
+
+  .CTA-button > div:first-child {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .CTA-button > div > p,
+  .CTA-button > div > img {
+    cursor: pointer;
+  }
+
+  .CTA-button > div > p {
+    font-size: clamp(0.6rem, 1.2vw, 1.3rem);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .CTA-button > div > img {
+    width: clamp(10rem, 20vw, 17rem);
+    height: auto;
+    transition: filter 0.3s ease;
+  }
+
+  .CTA-button > div > img:hover {
+    filter: brightness(1.5) contrast(1.5);
+  }
+
+  .bottom-panel > img {
+    height: clamp(25rem, 65vw, 30rem);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-60%);
+  }
 }

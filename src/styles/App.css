@@ -34,11 +34,47 @@ nav {
 .left-nav,
 .right-nav,
 .hexagon-border {
-  display: none !important;
+  display: none;
 }
 
 ul li {
   list-style: none;
+}
+
+.left-nav ul li:nth-of-type(2),
+.left-nav ul li:nth-of-type(3),
+.right-nav ul li:first-of-type,
+.right-nav ul li:nth-of-type(2) {
+  cursor: pointer;
+  position: relative;
+}
+
+.left-nav ul li:nth-of-type(2)::after,
+.left-nav ul li:nth-of-type(3)::after,
+.right-nav ul li:first-of-type::after,
+.right-nav ul li:nth-of-type(2)::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* adjust as needed */
+  left: 0;
+  height: 2px;
+  background: #0000005a;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.15s ease;
+}
+
+.left-nav ul li:nth-of-type(2):hover::after,
+.left-nav ul li:nth-of-type(3):hover::after,
+.right-nav ul li:first-of-type:hover::after,
+.right-nav ul li:nth-of-type(2):hover::after {
+  transform: scaleX(1);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Burger visible only in small screens */
@@ -136,6 +172,10 @@ ul li {
 /* Breakpoints */
 @media (min-width: 600px) {
   /* Small tablets */
+  .burger-container,
+  #side-drawer {
+    display: none;
+  }
 
   .hexagon-border {
     width: 100px;
@@ -168,28 +208,33 @@ ul li {
   }
 
   .hexagon-fill > img {
-    width: 60px;
+    width: 4em;
+  }
+
+  .left-nav,
+  .right-nav,
+  .hexagon-border {
+    display: flex;
   }
 
   nav > div {
-    display: flex;
     width: 50%;
   }
 
   nav ul {
     /* border: 2px solid gold; */
     width: 100%;
-    font-size: 0.7rem;
+    font-size: clamp(0.7rem, 2vw, 1rem);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
 
-  nav > div:nth-of-type(1) > ul {
+  nav > div:nth-of-type(2) > ul {
     margin-right: 30px;
   }
 
-  nav > div:nth-of-type(3) > ul {
+  nav > div:nth-of-type(4) > ul {
     margin-left: 40px;
   }
 
@@ -206,7 +251,7 @@ ul li {
 
   .options {
     position: absolute;
-    width: 100px;
+    width: min(17vw, 9em);
     height: max-content;
     display: none;
     flex-direction: column;
@@ -215,11 +260,11 @@ ul li {
 
   .options > button {
     cursor: pointer;
-    height: 3rem;
+    height: 3em;
     font-family: inherit;
-    font-size: 1em;
+    font-size: clamp(0.9em, 1.7vw, 1em);
     text-align: left;
-    padding: 0 8%;
+    padding: 0 min(2vw, 0.8em);
     border-style: none;
     background: var(--inactive);
   }
@@ -227,16 +272,4 @@ ul li {
   .options > button:hover {
     background: var(--vivid-orange);
   }
-}
-
-@media (min-width: 768px) {
-  /* Tablets (iPad Portrait) */
-}
-
-@media (min-width: 1024px) {
-  /* Desktop (iPad Landscape / Laptops) */
-}
-
-@media (min-width: 1280px) {
-  /* Large desktops */
 }
