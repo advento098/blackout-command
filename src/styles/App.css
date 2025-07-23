@@ -111,13 +111,16 @@ a {
   border-bottom: 1px solid
     linear-gradient(to right, var(--start-color), var(--end-color));
   height: 10%;
-  font-family: "Anton", sans-serif;
-  font-size: min(1rem, 1.2rem);
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.brand-header > h1 {
+  font-family: "Anton", sans-serif;
+  font-size: clamp(1rem, 6vw, 1.8rem);
+  text-align: center;
 }
 
 .brand-header > h1::after {
@@ -158,6 +161,7 @@ a {
   height: 100%;
   display: block;
   border-radius: 5px;
+  font-size: clamp(0.5rem, 4vw, 1.1rem);
   text-decoration: none;
   display: flex;
   justify-content: center;

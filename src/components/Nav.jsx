@@ -60,9 +60,15 @@ export default function Nav() {
               Game Info
               <span className="material-symbols-outlined">arrow_drop_down</span>
               <div className="options">
-                <button>Weapons</button>
-                <button>Disguise</button>
-                <button>Customization</button>
+                <button>
+                  <a href="/">Weapons</a>
+                </button>
+                <button>
+                  <a href="/">Disguise</a>
+                </button>
+                <button>
+                  <a href="/">Customization</a>
+                </button>
               </div>
             </li>
           </ul>

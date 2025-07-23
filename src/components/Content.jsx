@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import "../styles/Content.css";
 export default function Content() {
   return (
@@ -19,8 +20,10 @@ export default function Content() {
           </div>
           <div className="CTA-button">
             <div>
-              <img src="./src/assets/button.svg"></img>
-              <p>Download Now</p>
+              <a href="/">
+                <img src="./src/assets/button.svg" />
+                <p>Download Now</p>
+              </a>
             </div>
             <div>
               <p>Download on PC</p>
