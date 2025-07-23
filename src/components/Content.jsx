@@ -1,5 +1,7 @@
-import { useEffect, useRef, useState } from "react";
 import "../styles/Content.css";
+import button from "../assets/button.svg";
+import characterModel from "../assets/character-model.svg";
+
 export default function Content() {
   return (
     <div>
@@ -12,10 +14,7 @@ export default function Content() {
       </div>
       <div className="bottom-panel">
         <div className="vignette"></div>
-        <img
-          src="./blackout-command/src/assets/character-model.svg"
-          alt="soldier-model"
-        />
+        <img src={characterModel} alt="soldier-model" />
         <div>
           <div className="copyright">
             &copy; Blackout Inc.
@@ -24,7 +23,7 @@ export default function Content() {
           <div className="CTA-button">
             <div>
               <a href="/">
-                <img src="./blackout-command/src/assets/button.svg" />
+                <img src={button} />
                 <p>Download Now</p>
               </a>
             </div>

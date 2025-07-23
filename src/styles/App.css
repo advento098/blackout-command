@@ -85,11 +85,16 @@ a {
   left: 20px;
   transform: translateY(-50%);
   z-index: 10;
+  cursor: pointer;
+}
+
+.burger-container > button {
+  background: transparent;
+  border-style: none;
 }
 
 .burger-icon {
   font-size: 2rem;
-  cursor: pointer;
   color: white;
 }
 
@@ -99,8 +104,9 @@ a {
   background: var(--black);
   position: absolute;
   top: 0;
-  left: -400px;
+  left: -16em;
   z-index: 100;
+  transition: left 0.15s ease-in-out;
 }
 
 #side-drawer.active {

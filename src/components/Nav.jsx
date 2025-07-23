@@ -1,3 +1,4 @@
+import logo from "../assets/controller-logo.svg";
 import { useEffect, useRef, useState } from "react";
 
 export default function Nav() {
@@ -24,9 +25,11 @@ export default function Nav() {
     <div>
       <nav>
         <div className="burger-container" onClick={toggleMenu}>
-          <span className="material-symbols-outlined burger-icon" id="burger">
-            menu
-          </span>
+          <button>
+            <span className="material-symbols-outlined burger-icon" id="burger">
+              menu
+            </span>
+          </button>
         </div>
 
         <div className="left-nav">
@@ -44,7 +47,7 @@ export default function Nav() {
 
         <div className="hexagon-border">
           <div className="hexagon-fill">
-            <img src="./blackout-command/src/assets/controller-logo.svg" />
+            <img src={logo} alt="button-design" />
           </div>
         </div>
 
